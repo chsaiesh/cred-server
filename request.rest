@@ -1,0 +1,105 @@
+POST http://localhost:3003/employees/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjUwNTk4NDgsImV4cCI6MTYyNTA2MDUwOH0.3wc_S715ZcoWs5pscpAPXMH5HXWmmyA7syoWRONVNu0
+
+{
+    "userName": "saiesh",
+    "password": "password",
+    "userType": "admin",
+    "employeeID": 1990,
+    "displayName": "Saiesh user"
+}
+
+###
+
+GET http://localhost:3003/employees/checkalldata
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "userName": "name5",
+    "password": "password"
+}
+
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjUwNTk4NDgsImV4cCI6MTYyNTA2MDUwOH0.3wc_S715ZcoWs5pscpAPXMH5HXWmmyA7syoWRONVNu0"
+}
+
+###
+
+GET http://localhost:3003/employees/fetch?employeeid=1111
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjUxNDg1NzQsImV4cCI6MTYyNTE0OTIzNH0.cLiGiz_qkqpfDACEhXAvI6USobuGg10tjmYRLaH1070
+
+
+###
+
+GET http://localhost:3003/employees/delete?id=60d5a6f9ea44c04718f48720
+
+
+###
+
+PATCH http://localhost:3003/employees/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjUxMzQzNzgsImV4cCI6MTYyNTEzNTAzOH0.to4KWUHXf3-99n11oOHrWdZ9RewLdZS6ZF3RyyxjZqo
+
+{
+    "id": "60dc6fd3ef56fb256425a922",
+    "userName": "saiesh",
+    "userType": "admin",
+    "employeeID": 1995,
+    "displayName": "Saiesh Chebrolu"
+}
+
+
+####
+
+
+GET http://localhost:3003/feedback
+
+###
+
+POST http://localhost:3003/feedback/tag
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjUxNDg1NzQsImV4cCI6MTYyNTE0OTIzNH0.cLiGiz_qkqpfDACEhXAvI6USobuGg10tjmYRLaH1070
+Content-Type: application/json
+
+{
+    "employeeID": 1002,
+    "supervisorID": 1111
+}
+
+###
+POST http://localhost:3003/feedback/addfeedback
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjUxNDg1NzQsImV4cCI6MTYyNTE0OTIzNH0.cLiGiz_qkqpfDACEhXAvI6USobuGg10tjmYRLaH1070
+
+{
+    "employeeID": 1002,
+    "supervisorID": 1111,
+    "feedback": "Good job"
+}
+
+###
+
+GET http://localhost:3003/feedback/getfeedback?employeeid=1111
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjQ5NTY3MzIsImV4cCI6MTYyNDk1NzM5Mn0.K6z3kOjFm_rDsSYeol5FV3Mw6LEtpfQMe5PoTg6MjiU
+
+
+
+
+
+
+
+
+
+
+
+
+
